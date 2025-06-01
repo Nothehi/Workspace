@@ -1,0 +1,2 @@
+alias npm='docker run --rm -v "$PWD":/app -w /app node:latest npm'
+alias psql='docker run -it --rm --network=host postgres:latest psql'
