@@ -1,2 +1,4 @@
 alias npm='docker run --rm -v "$PWD":/app -w /app node:latest npm'
 alias psql='docker run -it --rm --network=host postgres:latest psql'
+alias pg_dump='docker run -it --rm --network=host postgres:latest pg_dump'
+alias pg_restore='docker run -it --rm --network=host postgres:latest pg_restore'
