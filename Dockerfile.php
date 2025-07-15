@@ -33,6 +33,9 @@ RUN docker-php-ext-install zip soap mbstring exif bcmath sockets pcntl pdo pdo_p
 RUN docker-php-ext-configure gd --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd
 
+# Install Redis extension
+RUN pecl install redis && docker-php-ext-enable redis
+
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
